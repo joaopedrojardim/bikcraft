@@ -4,11 +4,8 @@
 }
 
 .header{
-    max-width: 1200px;
-    margin: auto;
     display: flex;
     justify-content: space-between;
-    box-sizing: border-box;
     align-items: center;
     padding: 20px;
     flex-wrap: wrap;

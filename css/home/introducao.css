@@ -9,11 +9,6 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0px 40px;
-    max-width: 1200px;
-    margin: auto;
-    box-sizing: border-box;
-    padding-left: 20px;
-    padding-right: 20px;
 }
 
 
@@ -29,6 +24,10 @@
 
 .introducao-conteudo p{
     margin-bottom: 20px;
+}
+
+.introducao img{
+    width: 100%;
 }
 
 
@@ -55,6 +54,7 @@
     .introducao img {
         height: 300px;
         width: 100%;
+        object-fit: cover;
     }
 }
 
