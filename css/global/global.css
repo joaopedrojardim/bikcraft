@@ -24,6 +24,6 @@ img[src$=".jpg"]{
     border-radius: 4px;
 }
 
-h1,h2,h3,h4,ul,p{
+h1,h2,h3,h4,ul,p,blockquote{
     margin: 0;
 }
