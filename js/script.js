@@ -37,12 +37,22 @@ function ativarPergunta(event){
     
     resposta.classList.toggle("ativo")
     const ativo = resposta.classList.contains("ativo")
-    console.log(ativo)
-    pergunta.setAttribute('aria-expanded', ativo)
-
-    
-    console.log(resposta)
-    
+    pergunta.setAttribute('aria-expanded', ativo) 
 }
 
 perguntas.forEach(eventosPerguntas)
+
+//Bicicleta interior galeria
+const galeria = document.querySelectorAll('.bicicleta-imagens img')
+const galeriaContainer = document.querySelector('.bicicleta-imagens ')
+
+function eventosGaleria(img){
+    img.addEventListener('click', trocarImg)
+}
+
+function trocarImg(event){
+    const img = event.currentTarget;
+    galeriaContainer.prepend(img)
+}
+
+galeria.forEach(eventosGaleria)
