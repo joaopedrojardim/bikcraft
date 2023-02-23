@@ -18,8 +18,31 @@ function ativarProduto(parametro){
     if(elemento){
         elemento.checked = true
     }
-
 }
-
 parametros.forEach(ativarProduto)
 
+//Perguntas frequentes
+const perguntas = document.querySelectorAll(".perguntas button")
+
+function eventosPerguntas(pergunta){
+    pergunta.addEventListener('click', ativarPergunta)
+}
+
+function ativarPergunta(event){
+    
+    const pergunta = event.currentTarget
+    const controls = pergunta.getAttribute('aria-controls')
+    const resposta = document.getElementById(controls)
+
+    
+    resposta.classList.toggle("ativo")
+    const ativo = resposta.classList.contains("ativo")
+    console.log(ativo)
+    pergunta.setAttribute('aria-expanded', ativo)
+
+    
+    console.log(resposta)
+    
+}
+
+perguntas.forEach(eventosPerguntas)
